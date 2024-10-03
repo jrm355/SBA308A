@@ -1,0 +1,59 @@
+* {background-color: rgb(11, 8, 5);}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(216, 49, 19);
+    padding: 20px;
+    color: whitesmoke
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dog-section, .cat-section, .verses-section {
+    text-align: center;
+    background-color: rgb(226, 25, 14);
+    padding: 20px;
+    margin: 10px;
+}
+
+.dog-section, .cat-section {
+    width: 300px;
+    height: 400px;
+    color: whitesmoke
+}
+
+.verses-section {
+    width: 100px;
+    height: 100px;
+    color: white
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
