@@ -3,7 +3,7 @@ async function fetchDogImages() {
     const dogImagesContainer = document.getElementById('dog-images-container');
     dogImagesContainer.innerHTML = ''; // Clear previous images
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         const response = await fetch('https://dog.ceo/api/breeds/image/random');
         const data = await response.json();
         const imgElement = document.createElement('img');
@@ -39,6 +39,48 @@ function selectDogImage(imgSrc) {
 function selectCatImage(imgSrc) {
     document.getElementById('cat-img').src = imgSrc;
 }
+
+// Generate random stats for both the cat and dog
+function generateRandomStats() {
+    return Math.floor(Math.random() * 100) + 1; // Random stat between 1 and 100
+}
+
+// Display winner
+function displayWinner(winner) {
+    const winnerDiv = document.getElementById('winner');
+    winnerDiv.textContent = winner + " Wins!";
+    winnerDiv.classList.remove('hidden');
+}
+
+// Clear stats and reset UI for the next fight
+function resetFight() {
+    document.getElementById('dog-stats').textContent = 'Stats: ';
+    document.getElementById('cat-stats').textContent = 'Stats: ';
+    document.getElementById('winner').classList.add('hidden'); // Hide the winner announcement
+}
+
+// Verses button logic
+document.getElementById('verses-btn').addEventListener('click', function() {
+    const dogStat = generateRandomStats();
+    const catStat = generateRandomStats();
+    
+    document.getElementById('dog-stats').textContent = 'Stats: ' + dogStat;
+    document.getElementById('cat-stats').textContent = 'Stats: ' + catStat;
+
+    // Compare stats and display winner
+    if (dogStat > catStat) {
+        displayWinner('Dog');
+    } else {
+        displayWinner('Cat');
+    }
+
+    // Reset for the next fight after a delay
+    setTimeout(() => {
+        resetFight(); // Clear stats and winner message
+        fetchDogImages(); // Fetch new dog images
+        fetchCatImages(); // Fetch new cat images
+    }, 3000); // Wait 3 seconds before resetting
+});
 
 // Fetch the images on page load
 fetchDogImages();

@@ -12,7 +12,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
 }
 
@@ -39,8 +39,8 @@ body {
 }
 
 .dog-section, .cat-section {
-    width: 300px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     color: whitesmoke
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 img {
-    width: 220px;
-    height: auto
+    width: 400px;
+    height: 300px;
 }
 
 .hidden {
@@ -86,4 +86,78 @@ img {
 
 .verses-section button:hover {
     background-color: #000000; 
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+    gap: 10px;
+}
+
+.scroll-container img {
+    width: 50px;   /* Thumbnail size */
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.scroll-container img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.selectable-img {
+    border: 2px solid transparent;
+}
+
+.selectable-img.selected {
+    border-color: #FF6347; /* Highlight selected image */
+}
+
+/* Style for the images */
+#dog-img, #cat-img {
+    width: 300px; /* Adjust the size as needed */
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for movement */
+}
+
+/* Animation class for moving images */
+@keyframes clash {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-200px); /* Move dog left */
+    }
+    60% {
+        transform: translateX(200px); /* Move dog left */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
+}
+
+@keyframes clashCat {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(200px); /* Move dog left */
+    }
+    60% {
+        transform: translateX(-200px); /* Move dog left */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
+}
+
+/* Clash class to trigger animation */
+.clash {
+    animation: clash 1s ease forwards; /* Animation for dog */
+}
+
+.clash-cat {
+    animation: clashCat 1s ease forwards; /* Animation for cat */
 }

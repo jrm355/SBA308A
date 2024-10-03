@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="./1.js"></script>
+    <script defer src="./2.js"></script>
+    <script defer src="./3.js"></script>
 </head>
 <body>
     <div class="container">
+        
         <!-- Header -->
         <header class="header">
             <h1>Cat verses Dog</h1>
@@ -20,9 +23,13 @@
             <!-- Dog Section -->
             <div class="dog-section">
                 <h2>Dog</h2>
-                <img id="dog-img" src="" alt="Random Dog Image">
+                <div id="dog-images-container" class="scroll-container">
+                    <!-- Dog images will be injected here -->
+                </div>
+                <img id="dog-img" src="" alt="Selected Dog Image">
                 <p id="dog-stats">Stats: </p>
             </div>
+            
 
             <!-- Verses Section -->
             <div class="verses-section">
@@ -32,7 +39,10 @@
             <!-- Cat Section -->
             <div class="cat-section">
                 <h2>Cat</h2>
-                <img id="cat-img" src="" alt="Random Cat Image">
+                <div id="cat-images-container" class="scroll-container">
+                    <!-- Cat images will be injected here -->
+                </div>
+                <img id="cat-img" src="" alt="Selected Cat Image">
                 <p id="cat-stats">Stats: </p>
             </div>
         </div>
