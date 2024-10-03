@@ -1,3 +1,4 @@
+//clash Animation
 // Display winner
 function displayWinner(winner) {
     const winnerDiv = document.getElementById('winner');

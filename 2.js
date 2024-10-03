@@ -1,3 +1,4 @@
+//scroll wheel
 // Fetch multiple dog images (e.g., 5 images)
 async function fetchDogImages() {
     const dogImagesContainer = document.getElementById('dog-images-container');

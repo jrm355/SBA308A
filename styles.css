@@ -62,7 +62,7 @@ img {
 .winner {
     text-align: center;
     font-size: 50px;
-    color: red;
+    color: rgb(0, 255, 0);
     animation: winner-animation 1s infinite;
 }
 
@@ -73,7 +73,7 @@ img {
 }
 
 .verses-section button {
-    background-color: #FF6347; 
+    background-color: #5ea935; 
     color: white;              
     border: none;               
     font-size: 24px;           
@@ -112,7 +112,7 @@ img {
 }
 
 .selectable-img.selected {
-    border-color: #FF6347; /* Highlight selected image */
+    border-color: #47ffbb; /* Highlight selected image */
 }
 
 /* Style for the images */
