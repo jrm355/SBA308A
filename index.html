@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat vs Dog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="./1.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,19 +20,26 @@
             <!-- Dog Section -->
             <div class="dog-section">
                 <h2>Dog</h2>
-                <div class="image-placeholder">Random dog img</div>
+                <img id="dog-img" src="" alt="Random Dog Image">
+                <p id="dog-stats">Stats: </p>
             </div>
 
             <!-- Verses Section -->
             <div class="verses-section">
-                <h2>verses</h2>
+                <button id="verses-btn"><i class="fas fa-paw"></i> Fight</button>
             </div>
 
             <!-- Cat Section -->
             <div class="cat-section">
                 <h2>Cat</h2>
-                <div class="image-placeholder">Random cat img</div>
+                <img id="cat-img" src="" alt="Random Cat Image">
+                <p id="cat-stats">Stats: </p>
             </div>
+        </div>
+
+        <!-- Winner Announcement -->
+        <div id="winner" class="winner hidden">
+            <h1>Winner!</h1>
         </div>
     </div>
 </body>

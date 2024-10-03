@@ -1,5 +1,4 @@
 so my goal is to create code for a website that uses an api that produces a random dog img and a different api that produces a random cat img, then assigning random stats to both the cat img and dog img, click the verses button, and have whichever img has the higher stat have the word 'Winner' animated over it. 
 
-https://cataas.com
-
+https://api.thecatapi.com
 https://dog.ceo/dog-api/
