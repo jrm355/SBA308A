@@ -122,19 +122,19 @@ img {
     transition: transform 0.5s ease-in-out; /* Smooth transition for movement */
 }
 
-/* Animation class for moving images */
+/* Animation  for moving pictures */
 @keyframes clash {
     0% {
         transform: translateX(0);
     }
     30% {
-        transform: translateX(-200px); /* Move dog left */
+        transform: translateX(-200px); 
     }
     60% {
-        transform: translateX(200px); /* Move dog left */
+        transform: translateX(300px);
     }
     100% {
-        transform: translateX(0); /* Return to original position */
+        transform: translateX(0); 
     }
 }
 
@@ -143,13 +143,13 @@ img {
         transform: translateX(0);
     }
     30% {
-        transform: translateX(200px); /* Move dog left */
+        transform: translateX(200px);
     }
     60% {
-        transform: translateX(-200px); /* Move dog left */
+        transform: translateX(-300px); 
     }
     100% {
-        transform: translateX(0); /* Return to original position */
+        transform: translateX(0); 
     }
 }
 

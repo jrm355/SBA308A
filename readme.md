@@ -1,0 +1,3 @@
+# Random picture dog vs cat simulator
+## just click fight, the pictures clash, and one wins. It's essentially just an rng game. I feel like there it was a more creative way to come up with a game mechanic, so I like the idea of revisting this, but for now, they just randomly win.
+## rescources included past lectures, I used some past html code as a model for the design , as well as online rescources. 
