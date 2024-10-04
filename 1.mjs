@@ -1,5 +1,4 @@
-//Fetch photos
-
+//This file is for the initial big image 
 // Dog Image
 async function fetchDogImage() {
     const response = await fetch('https://dog.ceo/api/breeds/image/random');

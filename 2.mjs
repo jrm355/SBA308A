@@ -1,8 +1,8 @@
-//scroll wheel
-// Fetch multiple dog images (e.g., 5 images)
+//This file is to get the scroll wheel gallery, and button logic
+// Fetch multiple dog images 
 async function fetchDogImages() {
     const dogImagesContainer = document.getElementById('dog-images-container');
-    dogImagesContainer.innerHTML = ''; // Clear previous images
+    dogImagesContainer.innerHTML = ''; 
 
     for (let i = 0; i < 10; i++) {
         const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -15,7 +15,7 @@ async function fetchDogImages() {
     }
 }
 
-// Fetch multiple cat images (e.g., 5 images)
+// Fetch multiple cat images
 async function fetchCatImages() {
     const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=5');
     const data = await response.json();
@@ -31,36 +31,36 @@ async function fetchCatImages() {
     });
 }
 
-// Set selected dog image for battle
+//  selected dog image for battle
 function selectDogImage(imgSrc) {
     document.getElementById('dog-img').src = imgSrc;
 }
 
-// Set selected cat image for battle
+//  selected cat image for battle
 function selectCatImage(imgSrc) {
     document.getElementById('cat-img').src = imgSrc;
 }
 
-// Generate random stats for both the cat and dog
+//  random stats for both the cat and dog
 function generateRandomStats() {
     return Math.floor(Math.random() * 100) + 1; // Random stat between 1 and 100
 }
 
-// Display winner
+//  winner
 function displayWinner(winner) {
     const winnerDiv = document.getElementById('winner');
     winnerDiv.textContent = winner + " Wins!";
     winnerDiv.classList.remove('hidden');
 }
 
-// Clear stats and reset UI for the next fight
+// clear stats and reset UI for the next fight
 function resetFight() {
     document.getElementById('dog-stats').textContent = 'Stats: ';
     document.getElementById('cat-stats').textContent = 'Stats: ';
     document.getElementById('winner').classList.add('hidden'); // Hide the winner announcement
 }
 
-// Verses button logic
+// verses button logic
 document.getElementById('verses-btn').addEventListener('click', function() {
     const dogStat = generateRandomStats();
     const catStat = generateRandomStats();
@@ -80,9 +80,9 @@ document.getElementById('verses-btn').addEventListener('click', function() {
         resetFight(); // Clear stats and winner message
         fetchDogImages(); // Fetch new dog images
         fetchCatImages(); // Fetch new cat images
-    }, 3000); // Wait 3 seconds before resetting
+    }, 3000); // reset time
 });
 
-// Fetch the images on page load
+// Fetch the images on load
 fetchDogImages();
 fetchCatImages();

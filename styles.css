@@ -125,31 +125,31 @@ img {
 /* Animation  for moving pictures */
 @keyframes clash {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) rotate(0deg) rotateY(0deg); 
     }
     30% {
-        transform: translateX(-200px); 
+        transform: translateX(-200px) rotate(45deg) rotateY(90deg); 
     }
     60% {
-        transform: translateX(300px);
+        transform: translateX(300px) rotate(-45deg) rotateY(180deg); 
     }
     100% {
-        transform: translateX(0); 
+        transform: translateX(0) rotate(0deg) rotateY(360deg); 
     }
 }
 
 @keyframes clashCat {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) rotate(0deg) rotateX(0deg); 
     }
     30% {
-        transform: translateX(200px);
+        transform: translateX(200px) rotate(-45deg) rotateX(90deg); 
     }
     60% {
-        transform: translateX(-300px); 
+        transform: translateX(-300px) rotate(45deg) rotateX(180deg); 
     }
     100% {
-        transform: translateX(0); 
+        transform: translateX(0) rotate(0deg) rotateX(360deg); 
     }
 }
 

@@ -1,4 +1,4 @@
-//clash Animation
+//This file has the clash animation
 // Display winner
 function displayWinner(winner) {
     const winnerDiv = document.getElementById('winner');
